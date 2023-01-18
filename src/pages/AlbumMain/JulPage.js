@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './MonthPage.css';
-import JulImage from '../../images/jul.png';
+import JulImage from '../../images/month_jul.png';
 
 const MonthButton = () => {
   return (
@@ -13,7 +13,10 @@ const MonthButton = () => {
 
 function JulPage() {
   return (
-    <MonthButton />
+    <div>
+      <MonthButton />
+      <div className="monthName">7월</div>
+    </div>
   );
 }
 

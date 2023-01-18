@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './MonthPage.css';
-import OctImage from '../../images/oct.png';
+import OctImage from '../../images/month_oct.png';
 
 const MonthButton = () => {
   return (
@@ -13,7 +13,10 @@ const MonthButton = () => {
 
 function OctPage() {
   return (
-    <MonthButton />
+    <div>
+      <MonthButton />
+      <div className="monthName">10월</div>
+    </div>
   );
 }
 

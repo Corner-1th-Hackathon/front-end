@@ -5,3 +5,11 @@
     height: 100px;
     overflow: 'hidden';
  }
+
+ .monthName {
+    height: 4rem;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }

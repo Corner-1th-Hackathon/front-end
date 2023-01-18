@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './MonthPage.css';
-import SepImage from '../../images/sep.png';
+import SepImage from '../../images/month_sep.png';
 
 const MonthButton = () => {
   return (
@@ -13,7 +13,10 @@ const MonthButton = () => {
 
 function SepPage() {
   return (
-    <MonthButton />
+    <div>
+      <MonthButton />
+      <div className="monthName">9월</div>
+    </div>
   );
 }
 

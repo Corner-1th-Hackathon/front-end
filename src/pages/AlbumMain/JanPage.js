@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './MonthPage.css';
-import JanImage from '../../images/jan.png';
+import JanImage from '../../images/month_jan.png';
 
 const MonthButton = () => {
   return (
@@ -15,6 +15,7 @@ function JanPage() {
   return (
     <div>
       <MonthButton />
+      <div className="monthName">1월</div>
     </div>
   );
 }

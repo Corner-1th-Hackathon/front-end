@@ -1,7 +1,20 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import './MonthPage.css';
+import AprImage from '../../images/apr.png';
+
+const MonthButton = () => {
+  return (
+    <NavLink to={'/'} className='monthButton'>
+      <img src={AprImage}/>
+    </NavLink>
+  );
+};
 
 function AprPage() {
-  return <div>4월사진첩</div>;
+  return (
+    <MonthButton />
+  );
 }
 
 export default AprPage;

@@ -1,7 +1,22 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import './MonthPage.css';
+import JanImage from '../../images/jan.png';
 
-function JanPage() {
-  return <div>1월 사진첩</div>;
+const MonthButton = () => {
+  return (
+    <NavLink to={'/'} className='monthButton'>
+      <img src={JanImage}/>
+    </NavLink>
+  );
+};
+
+function JanPage() {  
+  return (
+    <div>
+      <MonthButton />
+    </div>
+  );
 }
 
 export default JanPage;

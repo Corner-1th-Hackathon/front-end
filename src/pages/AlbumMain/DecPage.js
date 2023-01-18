@@ -1,7 +1,20 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import './MonthPage.css';
+import DecImage from '../../images/dec.png';
+
+const MonthButton = () => {
+  return (
+    <NavLink to={'/'} className='monthButton'>
+      <img src={DecImage}/>
+    </NavLink>
+  );
+};
 
 function DecPage() {
-  return <div>12월사진첩</div>;
+  return (
+    <MonthButton />
+  );
 }
 
 export default DecPage;

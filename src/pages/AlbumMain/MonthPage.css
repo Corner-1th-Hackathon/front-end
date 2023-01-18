@@ -1,0 +1,7 @@
+.monthButton {
+    display: flex;
+    margin: 10;
+    width: 100px;
+    height: 100px;
+    overflow: 'hidden';
+ }

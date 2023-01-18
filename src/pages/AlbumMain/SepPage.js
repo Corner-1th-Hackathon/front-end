@@ -1,7 +1,20 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import './MonthPage.css';
+import SepImage from '../../images/sep.png';
+
+const MonthButton = () => {
+  return (
+    <NavLink to={'/'} className='monthButton'>
+      <img src={SepImage}/>
+    </NavLink>
+  );
+};
 
 function SepPage() {
-  return <div>9월사진첩</div>;
+  return (
+    <MonthButton />
+  );
 }
 
 export default SepPage;

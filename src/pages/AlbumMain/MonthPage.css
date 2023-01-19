@@ -1,26 +1,31 @@
-.monthButton {
-   display: flex;
-   top: 30px;
-   bottom: 30px;
-   width: 100px;
-   height: 100px;
-   overflow: 'hidden';
- }
+.mainButton {
+  display: flex;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  margin-left: 20px;
+  margin-top: 20px;
+  overflow: 'hidden';
+}
 
- .monthName {
-   height: 4rem;
-   font-size: 3rem;
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
+.monthName {
+  display: flex;
+  position: relative;
+  height: 4rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
- .wirteButton {
-   display: flex;
-   position: absolute;
-   bottom: 30px;
-   right: 30px;
-   width: 80px;
-   height: 80px;
-   overflow: 'hidden';
- }
+.wirteButton {
+  display: flex;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  overflow: 'hidden';
+}

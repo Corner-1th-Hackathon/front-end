@@ -1,26 +1,29 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import './MonthPage.css';
-import NoveImage from '../../images/month_nov.png';
+import MoonImage from '../../images/moon.png'
 import WriteImage from '../../images/planet.png';
 
 function NovPage() {
   return (
     <div>
-      <MonthButton />
+      <MainButton />
       <div className="monthName">11월</div>
       <WriteButton />
     </div>
   );
-}
+};
 
-const MonthButton = () => {
+// 메인 페이지 이동
+const MainButton = () => {
   return (
-    <NavLink to={'/'} className='monthButton'>
-      <img src={NoveImage} alt='메인으로' />
+    <NavLink to={'/'} className='mainButton'>
+      <img src={MoonImage} alt='메인으로' />
     </NavLink>
   );
-};
+}; 
+
+// 글쓰기 버튼, 이동
 
 const WriteButton = () => {
   return (

@@ -1,0 +1,13 @@
+.rabbits-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: -40px;
+    padding-bottom: 30px;
+}
+
+.month-rabbit-img{
+    margin: 0px 40px -5px 40px;
+}
+

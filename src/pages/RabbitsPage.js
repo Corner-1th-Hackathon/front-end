@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/RabbitsPage.css";
 import "../css/CalendarPage.css";
+import { NavLink } from "react-router-dom";
 import jan from "../images/1월.png";
 import feb from "../images/2월.png";
 import mar from "../images/3월.png";
@@ -14,6 +15,23 @@ import oct from "../images/10월.png";
 import nov from "../images/11월.png";
 import dec from "../images/12월.png";
 
+const monthList = [
+  "jan",
+  "feb",
+  "mar",
+  "apr",
+  "may",
+  "jun",
+  "jul",
+  "aug",
+  "sep",
+  "oct",
+  "nov",
+  "dec",
+];
+
+const rabbitList = [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec];
+
 const RabbitsPage = () => {
   return (
     <div className="rabbits">
@@ -23,6 +41,20 @@ const RabbitsPage = () => {
           <button className="link-btn">Link</button>
           <button className="login-btn">Login</button>
         </div>
+      </div>
+
+      <div className="rabbits-wrapper">
+        {monthList.map((value, index) => (
+          <NavLink to={`/${value}`} key={index}>
+            <img
+              className="month-rabbit-img"
+              alt="토끼"
+              src={rabbitList[index]}
+              width="243px"
+              height="223px"
+            ></img>
+          </NavLink>
+        ))}
       </div>
     </div>
   );

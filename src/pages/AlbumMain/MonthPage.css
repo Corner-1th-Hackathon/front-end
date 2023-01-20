@@ -1,14 +1,15 @@
 .mainButton {
   display: flex;
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   margin-left: 20px;
   margin-top: 20px;
   overflow: 'hidden';
 }
 
 .monthName {
+  font-family: 'IM_Hyemin-Bold';
   display: flex;
   position: relative;
   height: 4rem;
@@ -20,8 +21,8 @@
 
 .wirteButton {
   display: flex;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   position: absolute;
   bottom: 0;
   right: 0;

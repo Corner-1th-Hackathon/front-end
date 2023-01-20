@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import { NavLink } from "react-router-dom";
 import './MonthPage.css';
 import MoonImage from '../../images/moon.png'
@@ -13,8 +13,7 @@ function AprPage() {
     </div>
   );
 };
-
-// 메인 페이지 이동
+// 각 달에 해당하는 토끼로 메인 페이지 이동
 const MainButton = () => {
   return (
     <NavLink to={'/'} className='mainButton'>

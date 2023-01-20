@@ -9,6 +9,7 @@
 }
 
 .tagName {
+  font-family: 'IM_Hyemin-Bold';
   display: flex;
   position: relative;
   height: 4rem;

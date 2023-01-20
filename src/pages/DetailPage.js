@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './DetailPage.css';
-import JanImage from '../images/month_jan.png'
+import '../css/DetailPage.css';
+import JanImage from '../images/1월.png'
 import SampleImage from '../images/SampleImage.png'
 
 // MonthPage에서 month를 받아 버튼을 만듦

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import './MonthPage.css';
+import '../../css/MonthPage.css';
 import MoonImage from '../../images/moon.png'
 import WriteImage from '../../images/planet.png';
 

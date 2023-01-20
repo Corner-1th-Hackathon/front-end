@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import "../css/CalendarPage.css";
 import moon from "../images/moon.png";
 import leftArrow from "../images/left_arrow.png";
@@ -60,20 +60,37 @@ const CalendarPage = () => {
     setMonth(monthList[(count + 1) % 12]); //0 1 2 3 .. 11
   };
 
+  const navigate = useNavigate();
+
   // useEffect(() => {
   //   // if (month === "1월") {
   //   //   const image = document.getElementsByClassName("rabbit-img");
   //   //   image[0].src = rabbitList[0];
   //   // }
   // }, [month]);
+  const handleCopyClipBoard = async (str) => {
+    try {
+      await navigator.clipboard.writeText(str);
+      alert("링크 복사 성공!");
+    } catch (e) {
+      alert("..링크 복사 실패");
+    }
+  };
 
   return (
     <div className="calendar">
       <div className="nav">
         <div className="user-name">계정 주인</div>
         <div className="btn-wrapper">
-          <button className="link-btn">Link</button>
-          <button className="login-btn">Login</button>
+          <button
+            className="link-btn"
+            onClick={() => handleCopyClipBoard("http://localhost:3000/")}
+          >
+            Link
+          </button>
+          <button className="login-btn" onClick={() => navigate("/login")}>
+            Login
+          </button>
         </div>
       </div>
 
@@ -174,10 +191,19 @@ const CalendarPage = () => {
       </div>
 
       <div className="rabbit-btn">
-        <img className="black-rabbit" alt="깜장토끼" src={blackRabbit}></img>
-        <div className="all-rabbit-content">전체 토끼 보기</div>
+        <img
+          className="black-rabbit"
+          alt="깜장토끼"
+          src={blackRabbit}
+          onClick={() => navigate("/rabbits")}
+        ></img>
+        <div
+          className="all-rabbit-content"
+          onClick={() => navigate("/rabbits")}
+        >
+          전체 토끼 보기
+        </div>
       </div>
-      {/* </div> */}
     </div>
   );
 };

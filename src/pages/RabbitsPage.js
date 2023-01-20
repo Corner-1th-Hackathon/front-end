@@ -1,7 +1,7 @@
 import React from "react";
 import "../css/RabbitsPage.css";
 import "../css/CalendarPage.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import jan from "../images/1월.png";
 import feb from "../images/2월.png";
 import mar from "../images/3월.png";
@@ -15,31 +15,61 @@ import oct from "../images/10월.png";
 import nov from "../images/11월.png";
 import dec from "../images/12월.png";
 
-const monthList = [
-  "jan",
-  "feb",
-  "mar",
-  "apr",
-  "may",
-  "jun",
-  "jul",
-  "aug",
-  "sep",
-  "oct",
-  "nov",
-  "dec",
-];
-
-const rabbitList = [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec];
-
 const RabbitsPage = () => {
+  const monthList = [
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec",
+  ];
+
+  const rabbitList = [
+    jan,
+    feb,
+    mar,
+    apr,
+    may,
+    jun,
+    jul,
+    aug,
+    sep,
+    oct,
+    nov,
+    dec,
+  ];
+  const navigate = useNavigate();
+
+  const handleCopyClipBoard = async (str) => {
+    try {
+      await navigator.clipboard.writeText(str);
+      alert("링크 복사 성공!");
+    } catch (e) {
+      alert("..링크 복사 실패");
+    }
+  };
+
   return (
     <div className="rabbits">
       <div className="nav">
         <div className="user-name">계정 주인</div>
         <div className="btn-wrapper">
-          <button className="link-btn">Link</button>
-          <button className="login-btn">Login</button>
+          <button
+            className="link-btn"
+            onClick={() => handleCopyClipBoard("http://localhost:3000/")}
+          >
+            Link
+          </button>
+          <button className="login-btn" onClick={() => navigate("/login")}>
+            Login
+          </button>
         </div>
       </div>
 

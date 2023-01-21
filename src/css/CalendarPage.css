@@ -92,7 +92,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin: 20px 0px 10px 0px;
+    margin: 20px 0px 5px 0px;
 }
 
 .rabbit-btn{
@@ -110,6 +110,6 @@
 }
 
 .all-rabbit-content{
-    font-size: 12px;
+    font-size: 17px;
     font-family: 'IM_Hyemin-Bold';
 }

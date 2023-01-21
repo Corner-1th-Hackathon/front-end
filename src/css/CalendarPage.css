@@ -1,7 +1,13 @@
 /* @media all and (max-width:1200px) {
 
 } */
-
+/*IM혜민체*/
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 .image-wrapper {
     position: relative;
@@ -13,6 +19,7 @@
 }
 
 .user-name {
+    font-family: 'IM_Hyemin-Bold';
     font-size: 30px;
     margin: 20px;
 }
@@ -22,6 +29,7 @@
 }
 
 .link-btn {
+    font-family: 'IM_Hyemin-Bold';
     background: none;
     color: #FFFFFF;
     font-size: 20px;
@@ -32,6 +40,7 @@
 }
 
 .login-btn{
+    font-family: 'IM_Hyemin-Bold';
     background: none;
     color: #FFFFFF;
     font-size: 20px;
@@ -75,6 +84,7 @@
 }
 
 .month-number{
+    font-family: 'IM_Hyemin-Bold';
     font-size: 34px;
 }
 
@@ -101,4 +111,5 @@
 
 .all-rabbit-content{
     font-size: 12px;
+    font-family: 'IM_Hyemin-Bold';
 }

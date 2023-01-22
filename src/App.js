@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import CalendarPage from "./pages/CalendarPage";
 import LoginPage from "./pages/LoginPage";
+import JoinPage from "./pages/JoinPage";
 import DetailPage from "./pages/DetailPage";
 import WritePage from "./pages/WritePage";
 import TagPage from "./pages/TagPage";
@@ -27,6 +28,7 @@ function App() {
         <Routes>
           <Route path="/" element={<CalendarPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/join" element={<JoinPage />} />
           <Route path="/detail" element={<DetailPage />} />
           <Route path="/write" element={<WritePage />} />
           <Route path="/tag" element={<TagPage />} />

@@ -13,6 +13,7 @@ function AprPage() {
     </div>
   );
 };
+
 // 각 달에 해당하는 토끼로 메인 페이지 이동
 const MainButton = () => {
   return (

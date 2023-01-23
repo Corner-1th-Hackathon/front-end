@@ -1,0 +1,32 @@
+.years-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: -40px;
+    padding-bottom: 30px;
+}
+
+.year-wrapper{
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-family: 'LeeSeoyun';
+    font-size: 28px;
+    text-align: center;    
+}
+
+.year-animal {
+    width: 243px;
+    height: 223px;
+    margin: 20px 40px 0px 40px;
+}
+
+.continue {
+    align-content: center;
+    justify-content: center;
+    font-family: 'LeeSeoyun';
+    text-align: center;    
+    font-size: 80px;
+    margin: 160px 40px 0px 40px;
+}

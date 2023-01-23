@@ -27,9 +27,13 @@ const tmpletter = '코너톤 화이팅~! 저희 팀은 가족, 친구, 애인이
 // 해당 달 화면으로 넘어가는 버튼
 const MonthButton = ({ month }) => {
   return (
-    <NavLink to={`/jan`} className='monthButton'>
-      <img src={JanImage} alt='월별 앨범으로' />
-    </NavLink>
+    <div className="wrap">
+      <span data-tooltip="앨범으로">
+        <NavLink to={`/jan`} className='monthButton'>
+          <img src={JanImage} alt='월별 앨범으로' />
+        </NavLink>
+      </span>
+    </div>
   );
 };
 

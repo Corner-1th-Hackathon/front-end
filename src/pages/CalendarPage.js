@@ -5,6 +5,8 @@ import moon from "../images/moon.png";
 import leftArrow from "../images/left_arrow.png";
 import rightArrow from "../images/right_arrow.png";
 import blackRabbit from "../images/black_rabbit.png";
+import map from "../images/map.png";
+import calendar from "../images/calendar.png";
 import jan from "../images/1월.png";
 import feb from "../images/2월.png";
 import mar from "../images/3월.png";
@@ -187,6 +189,21 @@ const CalendarPage = () => {
           alt="오른쪽 화살표"
           src={rightArrow}
           onClick={() => clickRight()}
+        ></img>
+      </div>
+
+      <div className="option-btn">
+        <img
+          className="calendar-btn"
+          alt="연간 버튼"
+          src={calendar}
+          onClick={() => navigate("/years")}
+        ></img>
+        <img
+          className="map-btn"
+          alt="지도 버튼"
+          src={map}
+          onClick={() => navigate("/map")}
         ></img>
       </div>
 

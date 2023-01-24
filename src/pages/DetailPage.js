@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import '../css/DetailPage.css';
 import JanImage from '../images/1월.png'
@@ -53,6 +53,45 @@ const DetailName = ({ name }) => {
 
 // 사진
 const DetailPhoto = ({ image }) => {
+  const useConfirm = (message = null, onConfirm, onCancel) => {
+    if (!onConfirm || typeof onConfirm !== "function") {
+      return;
+    }
+    if (onCancel && typeof onCancel !== "function") {
+      return;
+    }
+
+    const confirmAction = () => {
+      if (window.confirm(message)) {
+        onConfirm();
+      } else {
+        onCancel();
+      }
+    };
+
+    return confirmAction;
+  };
+  const deleteConfirm = () => console.log("삭제했습니다.");
+  const cancelConfirm = () => console.log("취소했습니다.");
+  const confirmDelete = useConfirm(
+    "삭제하시겠습니까?",
+    deleteConfirm,
+    cancelConfirm
+  );
+  
+  const privateList = [
+    "공개",
+    "비공개"
+  ]
+
+  const [cnt, setCnt] = useState(0);
+  const [priv, setPri] = useState(privateList[cnt]);
+
+  const clickPrivate = () => {
+    setCnt((cnt + 1) % 2);
+    setPri(privateList[(cnt + 1) % 2]);
+  };
+  
   return (
     <div>
       <div className="detail-image-wrapper">
@@ -63,20 +102,28 @@ const DetailPhoto = ({ image }) => {
         />
         <div className="detail-additional">
           <img 
-            src={EmptyHeart}
-            alt="비공개로 전환하기"
-            className="empty-icon"
-          />
-          <img 
-            src={FullHeart}
-            alt="공개로 전환하기"
-            className="full-icon"
-          />
-          <img 
             src={Bomb}
             alt="삭제하기"
             className="bomb-icon"
+            onClick={confirmDelete}
           />
+          <div onClick={clickPrivate}>
+            {priv === "공개" ? (
+              <img 
+                src={FullHeart}
+                alt="공개로 전환하기"
+                className="full-icon"
+              />
+            ) : priv === "비공개" ? (
+              <img 
+                src={EmptyHeart}
+                alt="비공개로 전환하기"
+                className="empty-icon"
+              />
+            ) : (
+              <div />
+            )}
+          </div>
         </div>
       </div>
     </div>

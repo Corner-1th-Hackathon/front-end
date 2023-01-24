@@ -220,7 +220,7 @@ const CalendarPage = () => {
             className="btn-description"
             onClick={() => navigate("/years")}
           >
-            년도 선택하기
+            전체 년도 보기
           </div>
         </div>      
         

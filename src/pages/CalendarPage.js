@@ -5,6 +5,9 @@ import moon from "../images/moon.png";
 import leftArrow from "../images/left_arrow.png";
 import rightArrow from "../images/right_arrow.png";
 import blackRabbit from "../images/black_rabbit.png";
+import map from "../images/map.png";
+import year from "../images/year.png";
+
 import jan from "../images/1월.png";
 import feb from "../images/2월.png";
 import mar from "../images/3월.png";
@@ -196,12 +199,44 @@ const CalendarPage = () => {
           alt="깜장토끼"
           src={blackRabbit}
           onClick={() => navigate("/rabbits")}
-        ></img>
+        />
         <div
           className="all-rabbit-content"
           onClick={() => navigate("/rabbits")}
         >
           전체 토끼 보기
+        </div>
+      </div>
+
+      <div className="additional-btn">
+        <div className="year-btn">
+          <img
+            className="year-calender"
+            alt="전체 년도 보기"
+            src={year}
+            onClick={() => navigate("/years")}
+          />
+          <div
+            className="btn-description"
+            onClick={() => navigate("/years")}
+          >
+            년도 선택하기
+          </div>
+        </div>      
+        
+        <div className="map-btn">
+          <img
+            className="point-map"
+            alt="지도보기"
+            src={map}
+            onClick={() => navigate("/map")}
+          />
+          <div
+            className="btn-description"
+            onClick={() => navigate("/map")}
+          >
+            지도 보기
+          </div>
         </div>
       </div>
     </div>

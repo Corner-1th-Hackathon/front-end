@@ -8,6 +8,7 @@ import WritePage from "./pages/WritePage";
 import TagPage from "./pages/TagPage";
 import RabbitsPage from "./pages/RabbitsPage";
 import YearPage from "./pages/YearPage";
+import MapPage from "./pages/MapPage";
 
 import JanPage from "./pages/AlbumMain/JanPage";
 import FebPage from "./pages/AlbumMain/FebPage";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/tag" element={<TagPage />} />
           <Route path="/rabbits" element={<RabbitsPage />} />
           <Route path="/years" element={<YearPage />} />
+          <Route path="/map" element={<MapPage />} />
 
           <Route path="/jan" element={<JanPage />} />
           <Route path="/feb" element={<FebPage />} />

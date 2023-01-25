@@ -4,6 +4,7 @@ import "../css/WritePage.css";
 
 const WritePage = () => {
   const [name, setName] = useState("");
+  const [date, setDate] = useState("2023-01-01");
   const [content, setContent] = useState("");
   const [tag, setTag] = useState("");
 
@@ -21,6 +22,21 @@ const WritePage = () => {
               value={name}
               id="write-name"
               onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+        </div>
+
+        <div className="write-wrapper">
+          <div className="write-title">Date</div>
+          <div className="write-value-wrapper">
+            <input
+              type="date"
+              name="date"
+              id="write-date"
+              value={date}
+              max="2023-12-31"
+              min="2023-01-01"
+              onChange={(e) => setDate(e.target.value)}
             />
           </div>
         </div>

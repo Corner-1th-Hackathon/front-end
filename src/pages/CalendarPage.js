@@ -193,6 +193,21 @@ const CalendarPage = () => {
         ></img>
       </div>
 
+      <div className="option-btn">
+        <img
+          className="calendar-btn"
+          alt="연간 버튼"
+          src={calendar}
+          onClick={() => navigate("/years")}
+        ></img>
+        <img
+          className="map-btn"
+          alt="지도 버튼"
+          src={map}
+          onClick={() => navigate("/map")}
+        ></img>
+      </div>
+
       <div className="rabbit-btn">
         <img
           className="black-rabbit"

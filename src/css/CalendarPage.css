@@ -92,7 +92,7 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    margin: 20px 0px 10px 0px;
+    margin: 20px 0px 5px 0px;
 }
 
 .rabbit-btn{
@@ -110,10 +110,11 @@
 }
 
 .all-rabbit-content{
-    font-size: 12px;
+    font-size: 17px;
     font-family: 'IM_Hyemin-Bold';
 }
 
+<<<<<<< HEAD
 .additional-btn{
     align-items: center;
     justify-content: center;
@@ -155,3 +156,23 @@
     width: 50px;
     height:50px;
 }
+=======
+.option-btn{
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin: -65px 0px 0px 30px;
+}
+
+.calendar-btn{
+    width: 60px;
+    height: 60px;
+}
+
+.map-btn{
+    width: 60px;
+    height: 60px;
+    padding-top: 10px;
+
+}
+>>>>>>> 090ef3c22793186eafb3125a2ef16c36426c8c30

@@ -12,8 +12,8 @@ const WritePage = () => {
 
   return (
     <div className="write-page">
-      <div className="write-form">
-        <div className="write-wrapper">
+      <div className="write-page-form">
+        <div className="write-page-wrapper">
           <div className="write-title">Name</div>
           <div className="write-value-wrapper">
             <input
@@ -26,7 +26,7 @@ const WritePage = () => {
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapper">
           <div className="write-title">Date</div>
           <div className="write-value-wrapper">
             <input
@@ -41,7 +41,7 @@ const WritePage = () => {
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapper">
           <div className="write-title">Content</div>
           <div className="write-value-wrapper">
             <textarea
@@ -54,7 +54,7 @@ const WritePage = () => {
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapper">
           <div className="write-title">Tag</div>
           <div className="write-value-wrapper">
             <input
@@ -67,7 +67,7 @@ const WritePage = () => {
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapper">
           <div className="write-title">Image</div>
           <div className="write-value-wrapper">
             <input type="file" name="image" id="write-image" alt="사진" />

@@ -10,7 +10,7 @@
     margin-top: 80px;
 }
 
-.join-write-form {
+.write-form {
     display: flex;
     flex-direction: column;
     margin: auto auto;

@@ -204,7 +204,7 @@ const CalendarPage = () => {
         <img
           className="calendar-btn"
           alt="연간 버튼"
-          src={calendar}
+          src={year}
           onClick={() => navigate("/years")}
         ></img>
         <img
@@ -227,38 +227,6 @@ const CalendarPage = () => {
           onClick={() => navigate("/rabbits")}
         >
           전체 토끼 보기
-        </div>
-      </div>
-
-      <div className="additional-btn">
-        <div className="year-btn">
-          <img
-            className="year-calender"
-            alt="전체 년도 보기"
-            src={year}
-            onClick={() => navigate("/years")}
-          />
-          <div
-            className="btn-description"
-            onClick={() => navigate("/years")}
-          >
-            전체 년도 보기
-          </div>
-        </div>      
-        
-        <div className="map-btn">
-          <img
-            className="point-map"
-            alt="지도보기"
-            src={map}
-            onClick={() => navigate("/map")}
-          />
-          <div
-            className="btn-description"
-            onClick={() => navigate("/map")}
-          >
-            지도 보기
-          </div>
         </div>
       </div>
     </div>

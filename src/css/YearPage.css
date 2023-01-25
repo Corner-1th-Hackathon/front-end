@@ -13,13 +13,39 @@
     justify-content: center;
     font-family: 'LeeSeoyun';
     font-size: 28px;
-    text-align: center;    
 }
 
-.year-animal {
+.year-2023 {
     width: 243px;
     height: 223px;
+    overflow: hidden;
     margin: 20px 40px 0px 40px;
+    position:relative;
+    padding-bottom:28px;
+}
+
+.year-2024 {
+    width: 250px;
+    height: 250px;
+    margin: 20px 40px 0px 40px;
+    overflow: hidden;
+}
+
+.year-2025 {
+    width: 210px;
+    height: 219px;
+    margin: 20px 40px 0px 40px;
+    overflow: hidden;
+    padding-bottom:32px;
+}
+
+.year-2026 {
+    width: 210px;
+    height: 200px;
+    margin: 20px 40px 0px 40px;
+    overflow: hidden;
+    padding-top:8px;
+    padding-bottom:40px;
 }
 
 .continue {

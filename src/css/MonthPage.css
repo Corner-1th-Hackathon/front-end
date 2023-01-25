@@ -19,14 +19,22 @@
   justify-content: center;
 }
 
-.wirteButton {
+.write-wrapper{
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  float: right;
+  margin: 0px 30px 10px 0px;
+}
+
+.write-btn{
+  width: 90px;
+  height:90px;
+}
+
+.wirteButton {
+  margin: 0px 20px 10px 20px;
   width: 90px;
   height: 90px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  overflow: 'hidden';
 }

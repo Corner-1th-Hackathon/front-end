@@ -38,7 +38,7 @@ const RabbitsPage = () => {
       <div className="years-wrapper">
         <div className="year-wrapper">
           <img
-            className="year-animal"
+            className="year-2023"
             alt="2023년"
             src={Year23}
           />
@@ -47,25 +47,27 @@ const RabbitsPage = () => {
 
         <div className="year-wrapper">
           <img
-            className="year-animal"
+            className="year-2024"
             alt="2024년"
             src={Year24}
           />
           <div>2024년</div>
         </div>
 
-        <div className="year-wrapper">
-          <img
-            className="year-animal"
-            alt="2025년"
-            src={Year25}
-          />
+          <div className="year-wrapper">
+          <div className="bg-croop">
+            <img
+              className="year-2025"
+              alt="2025년"
+              src={Year25}
+            />
+          </div>
           <div>2025년</div>
         </div>
 
         <div className="year-wrapper">
           <img
-            className="year-animal"
+            className="year-2026"
             alt="2026년"
             src={Year26}
           />

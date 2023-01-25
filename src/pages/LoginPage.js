@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Naver from "../images/naver.png"
+import MoonImage from '../images/moon.png'
 import "../css/Login.css"
+import "../css/Tooltip.css"
 
 function LoginPage() {
   const [userEmail, setUsername] = useState("");
@@ -10,6 +12,14 @@ function LoginPage() {
   
   return (    
     <div>
+      <div className="wrap">
+        <span data-tooltip="메인으로">
+          <NavLink to={'/'} className='mainButton'>
+            <img src={MoonImage} alt='메인으로' />
+          </NavLink>              
+        </span>
+      </div>
+
       <div className="login-title">로그인</div>
       <div className="write-form">
         <div className="cont-title">e-mail</div>

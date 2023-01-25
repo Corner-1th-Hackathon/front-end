@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import MoonImage from '../images/moon.png'
 import "../css/Join.css"
+import "../css/Tooltip.css"
 
 function Join() {      
   const [userEmail, setUsername] = useState("");
@@ -8,7 +10,15 @@ function Join() {
   const navigate = useNavigate();
   
   return (    
-    <div>
+    <div> 
+      <div className="wrap">
+        <span data-tooltip="메인으로">
+          <NavLink to={'/'} className='mainButton'>
+            <img src={MoonImage} alt='메인으로' />
+          </NavLink>              
+        </span>
+      </div>
+
       <div className="login-title">회원가입</div>
       <div className="write-form">
         <div className="cont-title">e-mail</div>

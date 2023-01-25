@@ -65,11 +65,18 @@ const CalendarPage = () => {
   const navigate = useNavigate();
 
   // useEffect(() => {
-  //   // if (month === "1월") {
-  //   //   const image = document.getElementsByClassName("rabbit-img");
-  //   //   image[0].src = rabbitList[0];
-  //   // }
-  // }, [month]);
+  //   axios({
+  //     method: "get",
+  //     url: `https://beabook-server.herokuapp.com/api/bookstore/getMapMarker`,
+  //   }).then((response) => {
+  //     if (response.data.success) {
+  //       setMarker(response.data.bookstore);
+  //     } else {
+  //       console.log("불러오기 실패");
+  //     }
+  //   });
+  // }, []);
+
   const handleCopyClipBoard = async (str) => {
     try {
       await navigator.clipboard.writeText(str);

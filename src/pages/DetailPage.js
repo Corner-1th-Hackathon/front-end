@@ -1,34 +1,72 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useRef, useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import '../css/DetailPage.css';
 import JanImage from '../images/1월.png'
-import SampleImage from '../images/SampleImage.png'
+import SampleImage from '../images/SampleImage.png';
 import Bomb from "../images/bomb.png";
 import EmptyHeart from "../images/empty-heart.png";
 import FullHeart from "../images/full-heart.png";
 
+
+function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(url)
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        setData(data);
+        setLoading(false);
+      })
+  }, []);
+  return [data, loading];
+}
+
 // MonthPage에서 month를 받아 버튼을 만듦
 function DetailPage({ month }) {
-  return (
-    <div className="detailPage">
-      <MonthButton month={month} />
-      <DetailName name={'코너corner'} />
-      <DetailPhoto image={SampleImage} />
-      <DetailDate date={'2023.01.28'} />
-      <DetailTag tags={temp} />
-      <hr />
-      <DetailLetter letter={tmpletter}/> 
-    </div>
-  );
+  const paths = window.location.href.split('/');
+  const url = '/' + paths[paths.length - 2] + '/' + paths[paths.length - 1];
+  const [data, loading] = useFetch(url);
+  const name = useRef();
+  const date = useRef();
+  const letter = useRef();
+  const image = useRef();
+
+  if (loading) {
+    return (
+      <div>loading</div>
+    )
+  } else {
+    let src='';
+    let image_url = '';
+    console.log('image:'+data.image);
+    if (data.image !== '-') {
+      src = `http://localhost/static/images/${data.image}`;
+      image_url = `<img src=${src} width='300px' height='300px' />`;
+    } else {
+      image_url='';
+    }
+    return (
+      <div className="detailPage">
+        <MonthButton month={month} />
+        <DetailName ref={name} name={data.name} />
+        <DetailPhoto ref={image} image={src} />
+        <DetailDate ref={date} date={data.date} />
+        <DetailTag tags={temp} />
+        <hr />
+        <DetailLetter ref={letter} letter={data.letter}/> 
+      </div>
+    );
+  };
 };
-
 const temp = [{cont: '코너'}, {cont: '덕성여자대학교'}, {cont: '컴퓨터공학과'}, {cont: '사랑해요'}]
-const tmpletter = '코너톤 화이팅~! 저희 팀은 가족, 친구, 애인이 적어준 자신의 사진첩을 만들었습니다. \
-좋아하는 음식을 먹을 때의 행복, 사랑하는 사람을 바라보는 표정, 즐거웠던 가족들과의 \
-여행. 이러한 소중한 추억을 사진과 간단한 편지로 기억해보세요. 사진과 함께 쓴 \
-편지를 통해 앨범을 통해 소중히 간직했던 속마음을 전달해보거나 추억을 생생히 \
-저장할 수 있습니다. '
-
+/*const tmpletter = '코너톤 화이팅~! 이라고만 적었더니 글씨체랑 크기 설정해놓은게 \
+잘 안보여서 길게 쓰는 중입니다. 200자 채우려고 열심히 쓰는데 생각보다 길어서 놀랐습니다. \
+이럴줄 알았으면 한글 입숨 쓰는건데 벌써 후회가 되지만 지금 122글자입니다. 특수 문자도 써볼까요\
+.“ ^^ &*!@#$ 아직 159글자입니다. 편지 받으면 왜 감동받을지 알겠네요. 제대로 만들어보세'*/
 // 해당 달 화면으로 넘어가는 버튼
 const MonthButton = ({ month }) => {
   return (
@@ -53,31 +91,19 @@ const DetailName = ({ name }) => {
 
 // 사진
 const DetailPhoto = ({ image }) => {
-  const useConfirm = (message = null, onConfirm, onCancel) => {
-    if (!onConfirm || typeof onConfirm !== "function") {
-      return;
-    }
-    if (onCancel && typeof onCancel !== "function") {
-      return;
-    }
+  const paths = window.location.href.split('/');
+  const url = '/' + paths[paths.length - 2] + '/' + paths[paths.length - 1];
+  const [data, loading] = useFetch(url);
+  const navigate = useNavigate();
 
-    const confirmAction = () => {
-      if (window.confirm(message)) {
-        onConfirm();
-      } else {
-        onCancel();
-      }
-    };
 
-    return confirmAction;
-  };
-  const deleteConfirm = () => console.log("삭제했습니다.");
-  const cancelConfirm = () => console.log("취소했습니다.");
-  const confirmDelete = useConfirm(
-    "삭제하시겠습니까?",
-    deleteConfirm,
-    cancelConfirm
-  );
+  const confirmDelete = () => {
+    if (window.confirm('삭제할까요?')) {
+      fetch(`/delete?post_code=${data.post_code}`)
+        .then(() => { navigate('/jan'); });
+    }
+  
+  }
   
   const privateList = [
     "공개",
@@ -91,7 +117,7 @@ const DetailPhoto = ({ image }) => {
     setCnt((cnt + 1) % 2);
     setPri(privateList[(cnt + 1) % 2]);
   };
-  
+
   return (
     <div>
       <div className="detail-image-wrapper">
@@ -157,7 +183,5 @@ const DetailLetter = ({ letter }) => {
     </p>
   );
 };
-
-
 
 export default DetailPage;

@@ -1,10 +1,17 @@
+/* 전체 스크롤 지우기 */
+body {
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
 .years-wrapper{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    margin-top: -40px;
-    padding-bottom: 30px;
 }
 
 .year-wrapper{
@@ -12,37 +19,37 @@
     align-content: center;
     justify-content: center;
     font-family: 'LeeSeoyun';
+    text-align: center;
     font-size: 28px;
 }
 
 .year-2023 {
-    width: 243px;
-    height: 223px;
-    overflow: hidden;
+    width: 195px;
+    height: 180px;
     margin: 20px 40px 0px 40px;
     position:relative;
     padding-bottom:28px;
 }
 
 .year-2024 {
-    width: 250px;
-    height: 250px;
-    margin: 20px 40px 0px 40px;
+    width: 218px;
+    height: 190px;
+    margin: 23px 40px 10px 40px;
     overflow: hidden;
 }
 
 .year-2025 {
-    width: 210px;
-    height: 219px;
-    margin: 20px 40px 0px 40px;
+    width: 175px;
+    height: 160px;
+    margin: 31px 40px 0px 40px;
     overflow: hidden;
     padding-bottom:32px;
 }
 
 .year-2026 {
-    width: 210px;
-    height: 200px;
-    margin: 20px 40px 0px 40px;
+    width: 150px;
+    height: 150px;
+    margin: 23px 40px -3px 40px;
     overflow: hidden;
     padding-top:8px;
     padding-bottom:40px;

@@ -6,7 +6,7 @@ import Year24 from "../images/year_2024.png";
 import Year25 from "../images/year_2025.png";
 import Year26 from "../images/year_2026.png";
 
-const RabbitsPage = () => {
+const YearPage = () => {
   const navigate = useNavigate();
 
   const handleCopyClipBoard = async (str) => {
@@ -19,7 +19,7 @@ const RabbitsPage = () => {
   };
 
   return (
-    <div className="rabbits">
+    <div className="years">
       <div className="nav">
         <div className="user-name">계정 주인</div>
         <div className="btn-wrapper">
@@ -82,4 +82,4 @@ const RabbitsPage = () => {
   );
 };
 
-export default RabbitsPage;
+export default YearPage;

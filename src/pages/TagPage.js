@@ -15,29 +15,21 @@ function TagPage() {
   );
 }
 
-// 각 달에 해당하는 토끼로 메인 페이지 이동
+// 메인페이지 이동
 const MainButton = () => {
   return (
-    <div className="wrap">
-      <span data-tooltip="메인으로">
-      <NavLink to={'/'} className='mainButton'>
-        <img src={MoonImage} alt='메인으로' />
-      </NavLink>              
-      </span>
-    </div>
+    <NavLink to={'/'} className='mainButton'>
+      <img src={MoonImage} alt='메인으로' />
+    </NavLink>
   );
 }; 
 
-// 글쓰기 버튼, 이동
+// 글쓰기 버튼
 const WriteButton = () => {
   return (
-    <div className="wrap">
-      <span write-tooltip="글작성">
-        <NavLink to={'/write'} className='wirteButton'>
-            <img className="write-btn" src={WriteImage} alt='글작성'/>
-        </NavLink>
-      </span>
-    </div>
+    <NavLink to={'/write'} className='wirteButton'>
+      <img src={WriteImage} alt='글작성'/>
+    </NavLink>
   )
 }
 

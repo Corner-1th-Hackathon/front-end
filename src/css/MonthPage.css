@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'IM_Hyemin-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .mainButton {
   display: flex;
   position: relative;
@@ -37,4 +44,22 @@
   margin: 0px 20px 10px 20px;
   width: 90px;
   height: 90px;
+}
+
+.post-list-style{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-items{
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'IM_Hyemin-Bold';
+  font-size: 20px;
+  padding: 20px;
+}
+
+.post-items img{
+  width: 200px;
+  height: 200px;
 }

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Map {
+    height: 100vh;
+}
+
+.markerbox-wrap{
+    background-color: #A0C6FF;
+    position: absolute;
+    left: -12vh;
+    bottom: 5.5vh;
+    width: 25vh;
+    height: 23vh;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.markerbox-picture-image{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.markerbox-position{
+    font-size: 1rem;
+    margin: 6px 0px 6px 0px;
+    font-family: 'LeeSeoyun';
+    color: #FFFFFF;
+}
+
+.markerbox-date{
+    font-size: 1rem;
+    font-family: 'LeeSeoyun';
+    color: #FFFFFF;
+}

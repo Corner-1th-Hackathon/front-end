@@ -74,6 +74,7 @@ const MainButton = () => {
   );
 };
 
+
 // 글쓰기 버튼, 이동
 const WriteButton = () => {
   return (

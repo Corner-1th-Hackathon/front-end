@@ -15,14 +15,19 @@ function WritePage() {
         <div className="write-wrapper">
           <div className="write-title">Name</div>
           <div className="write-value-wrapper">
-            <input type="text" name="username" ref={name} id="write-name" />
+          <input
+              type="text"
+              name="username"
+              ref={name}
+              id="write-name"
+            />
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapperr">
           <div className="write-title">Date</div>
           <div className="write-value-wrapper">
-            <input
+          <input
               type="date"
               name="date"
               id="write-date"
@@ -36,7 +41,7 @@ function WritePage() {
         <div className="write-wrapper">
           <div className="write-title">Content</div>
           <div className="write-value-wrapper">
-            <textarea
+          <textarea
               type="text"
               name="content"
               id="write-content"
@@ -45,23 +50,22 @@ function WritePage() {
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapper">
           <div className="write-title">Tag</div>
           <div className="write-value-wrapper">
-            <textarea type="text" name="tag" id="write-tag" ref={tag} />
+          <textarea
+              type="text"
+              name="tag"
+              id="write-tag"
+              ref={tag}
+            />
           </div>
         </div>
 
         <div className="write-wrapper">
           <div className="write-title">Image</div>
           <div className="write-value-wrapper">
-            <input
-              type="file"
-              ref={image}
-              name="image"
-              id="write-image"
-              alt="사진"
-            />
+            <input type="file" ref={image} name="image" id="write-image" alt="사진" />
           </div>
         </div>
       </div>
@@ -102,3 +106,4 @@ function WritePage() {
 }
 
 export default WritePage;
+

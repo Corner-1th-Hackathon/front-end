@@ -5,6 +5,7 @@ import PostItem from "../PostItem";
 import MoonImage from "../../images/moon.png";
 import WriteImage from "../../images/planet.png";
 
+
 function JulPage() {
   const navigate = useNavigate();
   const [items, setPostList] = useState([]);
@@ -61,6 +62,7 @@ const MainButton = () => {
     </div>
   );
 };
+
 
 // 글쓰기 버튼, 이동
 const WriteButton = () => {

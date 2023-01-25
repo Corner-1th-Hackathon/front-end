@@ -5,6 +5,7 @@ import PostItem from "../PostItem";
 import MoonImage from "../../images/moon.png";
 import WriteImage from "../../images/planet.png";
 
+
 function AugPage() {
   const navigate = useNavigate();
   const [items, setPostList] = useState([]);
@@ -49,6 +50,7 @@ function AugPage() {
   );
 }
 
+
 // 각 달에 해당하는 토끼로 메인 페이지 이동
 const MainButton = () => {
   return (
@@ -61,6 +63,7 @@ const MainButton = () => {
     </div>
   );
 };
+
 
 // 글쓰기 버튼, 이동
 const WriteButton = () => {

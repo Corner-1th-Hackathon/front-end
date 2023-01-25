@@ -1,5 +1,5 @@
-import React, { useRef } from 'react';
-import { useNavigate } from 'react-router';
+import React, { useRef } from "react";
+import { useNavigate } from "react-router";
 import "../css/WritePage.css";
 
 function WritePage() {
@@ -8,11 +8,11 @@ function WritePage() {
   const date = useRef();
   const letter = useRef();
   const image = useRef();
-  const tag=useRef();
+  const tag = useRef();
   return (
     <div className="write-page">
-      <div className="write-page-form">
-        <div className="write-page-wrapper">
+      <div className="write-form">
+        <div className="write-wrapper">
           <div className="write-title">Name</div>
           <div className="write-value-wrapper">
           <input
@@ -38,7 +38,7 @@ function WritePage() {
           </div>
         </div>
 
-        <div className="write-page-wrapper">
+        <div className="write-wrapper">
           <div className="write-title">Content</div>
           <div className="write-value-wrapper">
           <textarea
@@ -49,7 +49,6 @@ function WritePage() {
             />
           </div>
         </div>
-
 
         <div className="write-page-wrapper">
           <div className="write-title">Tag</div>
@@ -63,7 +62,7 @@ function WritePage() {
           </div>
         </div>
 
-        <div className="write-page-wrapper">
+        <div className="write-wrapper">
           <div className="write-title">Image</div>
           <div className="write-value-wrapper">
             <input type="file" ref={image} name="image" id="write-image" alt="사진" />
@@ -72,23 +71,28 @@ function WritePage() {
       </div>
 
       <div className="write-btn-wrapper">
-      <button className="write-cancel-btn" type='button' onClick={() => {
-                const form = new FormData();
-                form.append('name', name.current.value);
-                form.append('date', date.current.value);
-                form.append('letter', letter.current.value);
-                form.append('image', image.current.files[0]);
+        <button
+          className="write-cancel-btn"
+          type="button"
+          onClick={() => {
+            const form = new FormData();
+            form.append("name", name.current.value);
+            form.append("date", date.current.value);
+            form.append("letter", letter.current.value);
+            form.append("image", image.current.files[0]);
 
-                fetch('/insert', {
-                  method: 'post',
-                  encType: 'multipart/form-data',
-                  body: form,                  
-                })
-                .then(() => {
-                  navigate('/');
-                });
-              }}>Send</button>
-<button
+            fetch("/insert", {
+              method: "post",
+              encType: "multipart/form-data",
+              body: form,
+            }).then(() => {
+              navigate("/");
+            });
+          }}
+        >
+          Send
+        </button>
+        <button
           className="write-cancel-btn"
           onClick={() => {
             navigate(-1);
@@ -99,7 +103,7 @@ function WritePage() {
       </div>
     </div>
   );
-};
+}
 
 export default WritePage;
 

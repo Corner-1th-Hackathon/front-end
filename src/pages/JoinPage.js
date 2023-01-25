@@ -20,7 +20,7 @@ function Join() {
       </div>
 
       <div className="login-title">회원가입</div>
-      <div className="join-write-form">
+      <div className="write-form">
         <div className="cont-title">e-mail</div>
         <div className="useremail-wrapper">
           <input

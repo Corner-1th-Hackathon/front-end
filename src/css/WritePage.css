@@ -6,7 +6,7 @@
     font-style: normal;
 }
 
-.write-page-form{
+.write-form{
     display: flex;
     flex-direction: column;
     font-family: 'IM_Hyemin-Bold';
@@ -15,7 +15,7 @@
     padding-top: 4vw;
 }
 
-.write-page-wrapper{
+.write-wrapper{
     display: flex;
     flex-direction: row;
     justify-content: space-between;

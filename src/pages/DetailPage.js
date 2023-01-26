@@ -112,6 +112,7 @@ const DetailPhoto = ({ image }) => {
   const clickPrivate = () => {
     setCnt((cnt + 1) % 2);
     setPri(privateList[(cnt + 1) % 2]);
+    alert(privateList[(cnt + 1) % 2]+"로 변경합니다.")
   };
 
   return (
@@ -132,15 +133,15 @@ const DetailPhoto = ({ image }) => {
           <div onClick={clickPrivate}>
             {priv === "공개" ? (
               <img 
-                src={FullHeart}
-                alt="공개로 전환하기"
-                className="full-icon"
-              />
-            ) : priv === "비공개" ? (
-              <img 
                 src={EmptyHeart}
                 alt="비공개로 전환하기"
                 className="empty-icon"
+              />
+            ) : priv === "비공개" ? (
+              <img 
+                src={FullHeart}
+                alt="공개로 전환하기"
+                className="full-icon"
               />
             ) : (
               <div />

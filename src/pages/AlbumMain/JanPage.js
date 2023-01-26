@@ -32,12 +32,15 @@ function JanPage() {
         <WriteButton />
       </div>
 
-      Tag: <input tag='tag' ref={tag} />
-      <button type='button' onClick={()=>{
-          getList(`/list?tag=${tag.current.value}`)
-      }}>조회</button>
+      <div className="search-tag">
+        Tag :    
+        <input tag='tag' ref={tag} className="input-tag"/>
+        <button type='button' className="search-button" onClick={()=>{
+            getList(`/list?tag=${tag.current.value}`)
+        }}>검색</button>
       <br /><br />
 
+      </div>   
       {/* <h2>Post 목록</h2>
 
       등록된 Post 수: {items.length} */}

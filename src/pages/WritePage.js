@@ -9,6 +9,7 @@ function WritePage() {
   const letter = useRef();
   const image = useRef();
   const tag = useRef();
+  const address = useRef();
   return (
     <div className="write-page">
       <div className="write-page-form">
@@ -45,7 +46,7 @@ function WritePage() {
           </div>
         </div>
 
-        <div className="write-wrapper">
+        <div className="write-page-wrapper">
           <div className="write-title">Tag</div>
           <div className="write-value-wrapper">
             <textarea
@@ -54,6 +55,13 @@ function WritePage() {
               id="write-tag"
               ref={tag}
             />
+          </div>
+        </div>
+        
+        <div className="write-page-wrapper">
+          <div className="write-title">Address</div>
+          <div className="write-value-wrapper">
+            <textarea type="text" name="address" id="write-address" ref={address} />
           </div>
         </div>
 

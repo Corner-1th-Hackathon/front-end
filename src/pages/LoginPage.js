@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import Axios from 'axios';
-//import { Input } from 'antd';
-//import styled from 'styled-components';
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import Naver from "../images/naver.png";

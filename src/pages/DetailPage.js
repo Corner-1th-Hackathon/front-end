@@ -34,7 +34,6 @@ function DetailPage({ month }) {
   const date = useRef();
   const letter = useRef();
   const image = useRef();
-  const tag=useRef();
 
   if (loading) {
     return (
@@ -56,14 +55,19 @@ function DetailPage({ month }) {
         <DetailName ref={name} name={data.name} />
         <DetailPhoto ref={image} image={src} />
         <DetailDate ref={date} date={data.date} />
-        <DetailTag ref={tag} tag={data.tag }/>
+        <DetailTag tags={temp} />
         <hr />
         <DetailLetter ref={letter} letter={data.letter}/> 
       </div>
     );
   };
 };
-
+const temp = [{cont: '코너'}, {cont: '덕성여자대학교'}, {cont: '컴퓨터공학과'}, {cont: '사랑해요'}]
+/*const tmpletter = '코너톤 화이팅~! 이라고만 적었더니 글씨체랑 크기 설정해놓은게 \
+잘 안보여서 길게 쓰는 중입니다. 200자 채우려고 열심히 쓰는데 생각보다 길어서 놀랐습니다. \
+이럴줄 알았으면 한글 입숨 쓰는건데 벌써 후회가 되지만 지금 122글자입니다. 특수 문자도 써볼까요\
+.“ ^^ &*!@#$ 아직 159글자입니다. 편지 받으면 왜 감동받을지 알겠네요. 제대로 만들어보세'*/
+// 해당 달 화면으로 넘어가는 버튼
 const MonthButton = ({ month }) => {
   return (
     <div className="wrap">
@@ -112,7 +116,6 @@ const DetailPhoto = ({ image }) => {
   const clickPrivate = () => {
     setCnt((cnt + 1) % 2);
     setPri(privateList[(cnt + 1) % 2]);
-    alert(privateList[(cnt + 1) % 2]+'로 전환합니다.')
   };
 
   return (
@@ -133,15 +136,15 @@ const DetailPhoto = ({ image }) => {
           <div onClick={clickPrivate}>
             {priv === "공개" ? (
               <img 
-                src={EmptyHeart}
-                alt="비공개로 전환하기"
-                className="empty-icon"
-              />
-            ) : priv === "비공개" ? (
-              <img 
                 src={FullHeart}
                 alt="공개로 전환하기"
                 className="full-icon"
+              />
+            ) : priv === "비공개" ? (
+              <img 
+                src={EmptyHeart}
+                alt="비공개로 전환하기"
+                className="empty-icon"
               />
             ) : (
               <div />
@@ -163,10 +166,11 @@ const DetailDate = ({ date }) => {
 }
 
 // Tag 배열
-const DetailTag = ({ tag }) => {
+const DetailTag = ({ tags }) => {
+  const tagItem = tags.map((tag) => `#${tag.cont} `)
   return (
-    <div className="detailTag">
-      {tag}
+    <div className="detailTag">      
+      {tagItem}
     </div>
   )
 }

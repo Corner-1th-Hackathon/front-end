@@ -79,7 +79,7 @@ const RabbitsPage = () => {
   return (
     <div className="rabbits">
       <div className="nav">
-        <div className="user-name">계정 주인</div>
+        <div className="user-name">{username === "" ? " " : username}</div>
         <div className="btn-wrapper">
           <button
             className="link-btn"

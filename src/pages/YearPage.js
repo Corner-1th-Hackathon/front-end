@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../css/YearPage.css"
+import axios from "axios";
+import "../css/YearPage.css";
 import Year23 from "../images/year_2023.png";
 import Year24 from "../images/year_2024.png";
 import Year25 from "../images/year_2025.png";
@@ -18,10 +19,29 @@ const YearPage = () => {
     }
   };
 
+  const isAuthorized = localStorage.getItem("isAuthorized");
+  const username = localStorage.getItem("username");
+
+  const onClick = () => {
+    let token = localStorage.getItem("token");
+
+    axios
+      .post("/api/v1/shop/auth/logout/", token)
+      .then((res) => {
+        localStorage.clear();
+        navigate("/");
+      })
+      .catch((err) => {
+        console.clear();
+        console.log(err.response.data);
+        alert("로그아웃 실패");
+      });
+  };
+
   return (
     <div className="years">
       <div className="nav">
-        <div className="user-name">계정 주인</div>
+        <div className="user-name">{username === "" ? " " : username}</div>
         <div className="btn-wrapper">
           <button
             className="link-btn"
@@ -29,55 +49,43 @@ const YearPage = () => {
           >
             Link
           </button>
-          <button className="login-btn" onClick={() => navigate("/login")}>
-            Login
-          </button>
+          {!isAuthorized ? (
+            <button className="login-btn" onClick={() => navigate("/login")}>
+              Login
+            </button>
+          ) : (
+            <button className="login-btn" onClick={onClick}>
+              Logout
+            </button>
+          )}
         </div>
       </div>
 
       <div className="years-wrapper">
-        <div className="year-wrapper">
-          <img
-            className="year-2023"
-            alt="2023년"
-            src={Year23}
-          />
+        <div className="year-wrapper" onClick={() => navigate("/")}>
+          <img className="year-2023" alt="2023년" src={Year23} />
           <div>2023년</div>
         </div>
 
         <div className="year-wrapper">
-          <img
-            className="year-2024"
-            alt="2024년"
-            src={Year24}
-          />
+          <img className="year-2024" alt="2024년" src={Year24} />
           <div>2024년</div>
         </div>
 
-          <div className="year-wrapper">
+        <div className="year-wrapper">
           <div className="bg-croop">
-            <img
-              className="year-2025"
-              alt="2025년"
-              src={Year25}
-            />
+            <img className="year-2025" alt="2025년" src={Year25} />
           </div>
           <div>2025년</div>
         </div>
 
         <div className="year-wrapper">
-          <img
-            className="year-2026"
-            alt="2026년"
-            src={Year26}
-          />
+          <img className="year-2026" alt="2026년" src={Year26} />
           <div>2026년</div>
         </div>
       </div>
 
-      <div className="continue">
-        To Be Continue!
-      </div>
+      <div className="continue">To Be Continue!</div>
     </div>
   );
 };

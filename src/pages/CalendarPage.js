@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../css/CalendarPage.css";
@@ -105,9 +105,7 @@ const CalendarPage = () => {
   return (
     <div className="calendar">
       <div className="nav">
-        <div className="user-name">
-          {auth !== null && username === "" ? " " : username}
-        </div>
+        <div className="user-name">{username === "" ? " " : username}</div>
         <div className="btn-wrapper">
           <button
             className="link-btn"

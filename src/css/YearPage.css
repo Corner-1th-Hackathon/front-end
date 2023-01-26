@@ -60,7 +60,10 @@ body {
     justify-content: center;
     font-family: 'LeeSeoyun';
     text-align: center;    
-    font-size: 80px;
+    background: linear-gradient(to right top, #a871eb,  #8C9AD7);
+    color: transparent;
+    background-clip: text;
+    font-size: 90px;
     margin: 160px 40px 0px 40px;
 }
 

@@ -9,6 +9,7 @@ function FebPage() {
   const navigate = useNavigate();
   const [items, setPostList] = useState([]);
   const name = useRef();
+  const tag3=useRef();
 
   function getList(url) {
     fetch(url)
@@ -30,6 +31,15 @@ function FebPage() {
         <div className="monthName">3월</div>
         <WriteButton />
       </div>
+      <div className="search-tag">
+        Tag :    
+        <input tag='tag' ref={tag3} className="input-tag"/>
+        <button type='button' className="search-button" onClick={()=>{
+            getList(`/list?tag=${tag3.current.value}`)
+        }}>검색</button>
+      <br /><br />
+
+      </div> 
       <br />
       <br />
       <div className="post-list-style">

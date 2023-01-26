@@ -90,6 +90,7 @@ function WritePage() {
             form.append("letter", letter.current.value);
             form.append("image", image.current.files[0]);
             form.append("tag", tag.current.value);
+            form.append("address", address.current.value);
 
             fetch("/insert", {
               method: "post",

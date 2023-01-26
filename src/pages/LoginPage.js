@@ -35,7 +35,7 @@ function LoginPage() {
         <div className="cont-title">Password</div>
         <div className="password-wrapper">
           <input
-            type="text"
+            type="password"
             name="password"
             id="password"
             value={content}

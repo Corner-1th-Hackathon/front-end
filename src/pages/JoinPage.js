@@ -5,8 +5,10 @@ import "../css/Join.css"
 import "../css/Tooltip.css"
 
 function Join() {      
-  const [userEmail, setUsername] = useState("");
-  const [content, setContent] = useState("");
+  const [userName, setUserName] = useState("");
+  const [userEmail, setEmail] = useState("");
+  const [passWord, setPass] = useState("");
+  const [ConfirmPass, setConfirm] = useState("");
   const navigate = useNavigate();
   
   return (    
@@ -21,6 +23,16 @@ function Join() {
 
       <div className="login-title">회원가입</div>
       <div className="write-form">
+        <div className="cont-title">UserName</div>
+        <div className="username-wrapper">
+          <input
+            type="text"
+            name="userName"
+            value={userName}
+            id="user-name"
+            onChange={(e) => setUserName(e.target.value)}
+          />
+        </div>
         <div className="cont-title">e-mail</div>
         <div className="useremail-wrapper">
           <input
@@ -28,27 +40,27 @@ function Join() {
             name="userEmail"
             value={userEmail}
             id="user-email"
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="cont-title">Password</div>
         <div className="password-wrapper">
           <input
-            type="text"
+            type="password"
             name="password"
             id="password"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
+            value={passWord}
+            onChange={(e) => setPass(e.target.value)}
           />
         </div>
         <div className="cont-title">Confirm Password</div>
         <div className="confirm-wrapper">
           <input
-            type="text"
+            type="password"
             name="confirm"
             id="confirm-password"
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
+            value={ConfirmPass}
+            onChange={(e) => setConfirm(e.target.value)}
           />
         </div>
       </div>

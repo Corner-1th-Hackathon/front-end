@@ -2,6 +2,7 @@ import React from "react";
 import "../css/RabbitsPage.css";
 import "../css/CalendarPage.css";
 import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
 import jan from "../images/1월.png";
 import feb from "../images/2월.png";
 import mar from "../images/3월.png";
@@ -56,6 +57,25 @@ const RabbitsPage = () => {
     }
   };
 
+  const isAuthorized = localStorage.getItem("isAuthorized");
+  const username = localStorage.getItem("username");
+
+  const onClick = () => {
+    let token = localStorage.getItem("token");
+
+    axios
+      .post("/api/v1/shop/auth/logout/", token)
+      .then((res) => {
+        localStorage.clear();
+        navigate("/");
+      })
+      .catch((err) => {
+        console.clear();
+        console.log(err.response.data);
+        alert("로그아웃 실패");
+      });
+  };
+
   return (
     <div className="rabbits">
       <div className="nav">
@@ -67,9 +87,15 @@ const RabbitsPage = () => {
           >
             Link
           </button>
-          <button className="login-btn" onClick={() => navigate("/login")}>
-            Login
-          </button>
+          {!isAuthorized ? (
+            <button className="login-btn" onClick={() => navigate("/login")}>
+              Login
+            </button>
+          ) : (
+            <button className="login-btn" onClick={onClick}>
+              Logout
+            </button>
+          )}
         </div>
       </div>
 

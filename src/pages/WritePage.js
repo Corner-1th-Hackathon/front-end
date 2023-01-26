@@ -45,10 +45,15 @@ function WritePage() {
           </div>
         </div>
 
-        <div className="write-page-wrapper">
+        <div className="write-wrapper">
           <div className="write-title">Tag</div>
           <div className="write-value-wrapper">
-            <textarea type="text" name="tag" id="write-tag" ref={tag} />
+            <textarea
+              type="text"
+              name="tag"
+              id="write-tag"
+              ref={tag}
+            />
           </div>
         </div>
 
@@ -76,6 +81,7 @@ function WritePage() {
             form.append("date", date.current.value);
             form.append("letter", letter.current.value);
             form.append("image", image.current.files[0]);
+            form.append("tag", tag.current.value);
 
             fetch("/insert", {
               method: "post",

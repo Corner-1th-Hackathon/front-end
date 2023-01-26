@@ -9,6 +9,7 @@ function JanPage() {
   const navigate = useNavigate();
   const [items, setPostList] = useState([]);
   const name = useRef();
+  const tag=useRef();
 
   function getList(url) {
     fetch(url)
@@ -30,6 +31,12 @@ function JanPage() {
         <div className="monthName">1월</div>
         <WriteButton />
       </div>
+
+      Tag: <input tag='tag' ref={tag} />
+      <button type='button' onClick={()=>{
+          getList(`/list?tag=${tag.current.value}`)
+      }}>조회</button>
+      <br /><br />
 
       {/* <h2>Post 목록</h2>
 

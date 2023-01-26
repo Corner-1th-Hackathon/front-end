@@ -1,7 +1,6 @@
 /* 전체 스크롤 지우기 */
 body {
     -ms-overflow-style: none;
-    overflow:hidden;
 }
 ::-webkit-scrollbar {
     display: none;

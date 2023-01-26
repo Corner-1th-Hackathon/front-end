@@ -41,8 +41,8 @@
     margin: 15px 0px;
 }
 
-#write-name, #write-tag, #write-image, #write-date, #wrtie-address{
-    height: 4vw;
+#write-name, #write-tag, #write-image, #write-date, #write-address{
+    height: 3vw;
 }
 
 #write-content{
@@ -50,7 +50,7 @@
 }
 
 .write-btn-wrapper{
-    margin-top: 30px;
+    margin-top: 15px;
     margin-right: 10vw;
     float: right;
 }

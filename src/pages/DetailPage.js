@@ -34,6 +34,7 @@ function DetailPage({ month }) {
   const letter = useRef();
   const image = useRef();
   const tag = useRef();
+  const address = useRef();
 
   if (loading) {
     return <div>loading</div>;
@@ -54,6 +55,7 @@ function DetailPage({ month }) {
         <DetailPhoto ref={image} image={src} />
         <DetailDate ref={date} date={data.date} />
         <DetailTag ref={tag} tag={data.tag} />
+        <DetailAddress ref={address} address={data.address} />
         <hr />
         <DetailLetter ref={letter} letter={data.letter} />
       </div>
@@ -101,6 +103,7 @@ const DetailPhoto = ({ image }) => {
   const clickPrivate = () => {
     setCnt((cnt + 1) % 2);
     setPri(privateList[(cnt + 1) % 2]);
+    alert(privateList[(cnt + 1) % 2] + "로 변경합니다.");
   };
 
   return (
@@ -117,15 +120,15 @@ const DetailPhoto = ({ image }) => {
           <div onClick={clickPrivate}>
             {priv === "공개" ? (
               <img
-                src={FullHeart}
-                alt="공개로 전환하기"
-                className="full-icon"
-              />
-            ) : priv === "비공개" ? (
-              <img
                 src={EmptyHeart}
                 alt="비공개로 전환하기"
                 className="empty-icon"
+              />
+            ) : priv === "비공개" ? (
+              <img
+                src={FullHeart}
+                alt="공개로 전환하기"
+                className="full-icon"
               />
             ) : (
               <div />
@@ -145,6 +148,10 @@ const DetailDate = ({ date }) => {
 // Tag 배열
 const DetailTag = ({ tag }) => {
   return <div className="detailTag">{tag}</div>;
+};
+
+const DetailAddress = ({ address }) => {
+  return <div className="detailAddress">장소:{address}</div>;
 };
 
 // 200자 이내의 편지

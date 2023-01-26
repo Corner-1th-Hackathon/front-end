@@ -92,6 +92,14 @@
     line-height: 1.5;
 }
 
+.detailAddress {
+    font-family: 'LeeSeoyun';
+    text-align: center;
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
 hr {
     width: "50%";
     margin: 5px 35%;

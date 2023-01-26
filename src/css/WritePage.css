@@ -27,7 +27,7 @@
     align-items: center;
 }
 
-#write-name, #write-content, #write-tag, #write-image, #write-date{
+#write-name, #write-content, #write-tag, #write-image, #write-date, #write-address{
     font-family: 'IM_Hyemin-Bold';
     background: none;
     outline: none;
@@ -41,7 +41,7 @@
     margin: 15px 0px;
 }
 
-#write-name, #write-tag, #write-image, #write-date{
+#write-name, #write-tag, #write-image, #write-date, #wrtie-address{
     height: 4vw;
 }
 

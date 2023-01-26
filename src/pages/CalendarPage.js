@@ -115,15 +115,19 @@ const CalendarPage = () => {
           >
             Link
           </button>
-          {!isAuthorized ? (
-            <button className="login-btn" onClick={() => navigate("/login")}>
-              Login
-            </button>
-          ) : (
-            <button className="login-btn" onClick={onClick}>
-              Logout
-            </button>
-          )}
+          <Menu>
+          { auth ?
+            <Menu.Item key="logout" onClick={handleLogout} className="link-btn">
+              로그아웃
+            </Menu.Item>
+            :
+            <Menu.Item key="signin" className="login-btn">
+              <Link to="/login">
+              로그인
+              </Link>
+            </Menu.Item>
+          }
+        </Menu>
         </div>
       </div>
 

@@ -1,34 +1,33 @@
 .login-title {
     font-family: 'IM_Hyemin-Bold';
-    display: flex;
-    position: relative;
     height: 4rem;
     font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-}
-
-.write-form {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
 }
 
 .cont-title {
-    display: flex;
     font-family: 'LeeSeoyun';
     font-size: 32px;
-    text-align: center;    
-    align-items: center;
-    justify-content: center;
-    margin: 5px 0px;
 }
 
-.useremail-wrapper, .password-wrapper, .confirm-wrapper {
+.login-write-form {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    padding-top: 1rem;
+}
+
+.login-wrapper{
+    padding-top: 1rem;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
+    text-align: center;
+}
+
+.loginForm{
+    margin: 20px 0px 20px 0px;
 }
 
 #user-email, #password, #confirm-password {
@@ -46,15 +45,27 @@
     height: 45px;
 }
 
-.join-button {
-    flex-direction: row;
-    margin-top: 30px;
-    text-align: center;    
+.login-page-btn {
+    font-family: 'LeeSeoyun';
+    background: none;
+    color: #FFFFFF;
+    font-size: 25px;
+    border: 4px solid #7BC0F0;
+    padding: 12px 10px 12px 10px;
+    border-radius: 100px;
+    background-color: #7BC0F0;
+    margin: 30px 0px 0px 0px;
+    width: 190px;
+}
+/* 
+.join-btn-wrap{
+    display: flex;
     align-items: center;
     justify-content: center;
-}
+    text-align: center;
+} */
 
-.join-page-btn {
+.join-btn {
     font-family: 'LeeSeoyun';
     background: none;
     color: #FFFFFF;
@@ -63,5 +74,5 @@
     padding: 12px 10px 12px 10px;
     border-radius: 100px;
     background-color: #9B8CD7;
-    width: 350px;
+    width: 190px;
 }

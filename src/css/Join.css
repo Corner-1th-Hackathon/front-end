@@ -1,15 +1,19 @@
-.login-title {
-    font-family: 'IM_Hyemin-Bold';
+.sign-wrapper{
     display: flex;
-    position: relative;
-    height: 4rem;
-    font-size: 3rem;
-    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;
+    text-align: center;
 }
 
-.write-form {
+.login-title {
+    font-family: 'IM_Hyemin-Bold';
+    height: 3.5rem;
+    font-size: 3rem;
+}
+
+.join-write-form {
     display: flex;
     flex-direction: column;
     margin: auto auto;
@@ -45,6 +49,10 @@
     padding: 2px;
     margin: 15px 0px;
     height: 40px;
+}
+
+#confirm-password{
+    margin-bottom:30px;
 }
 
 .naver-wrapper {
@@ -83,20 +91,8 @@
     justify-content: center;
 }
 
-.login-page-btn {
-    font-family: 'LeeSeoyun';
-    background: none;
-    color: #FFFFFF;
-    font-size: 25px;
-    border: 4px solid #7BC0F0;
-    padding: 12px 10px 12px 10px;
-    border-radius: 100px;
-    background-color: #7BC0F0;
-    margin: 0px 0px 0px 10px;
-    width: 190px;
-}
 
-.join-btn {
+.join-page-btn {
     font-family: 'LeeSeoyun';
     background: none;
     color: #FFFFFF;
@@ -105,6 +101,5 @@
     padding: 12px 10px 12px 10px;
     border-radius: 100px;
     background-color: #9B8CD7;
-    width: 190px;
-    margin: 0px 0px 0px 20px;
+    width: 350px;
 }

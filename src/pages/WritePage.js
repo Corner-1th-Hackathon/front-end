@@ -82,7 +82,7 @@ function WritePage() {
               encType: "multipart/form-data",
               body: form,
             }).then(() => {
-              navigate("/");
+              navigate("/jan");
             });
           }}
         >

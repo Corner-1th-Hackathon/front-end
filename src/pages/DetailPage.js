@@ -35,6 +35,7 @@ function DetailPage({ month }) {
   const letter = useRef();
   const image = useRef();
   const tag=useRef();
+  const address=useRef();
 
   if (loading) {
     return (
@@ -57,6 +58,7 @@ function DetailPage({ month }) {
         <DetailPhoto ref={image} image={src} />
         <DetailDate ref={date} date={data.date} />
         <DetailTag ref={tag} tag={data.tag }/>
+        <DetailAddress ref={address} address={data.address}/>
         <hr />
         <DetailLetter ref={letter} letter={data.letter}/> 
       </div>
@@ -166,6 +168,14 @@ const DetailTag = ({ tag }) => {
   return (
     <div className="detailTag">
       {tag}
+    </div>
+  )
+}
+
+const DetailAddress = ({ address }) => {
+  return (
+    <div className="detailAddress">
+      장소:{address}
     </div>
   )
 }

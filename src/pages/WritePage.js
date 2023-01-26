@@ -9,6 +9,7 @@ function WritePage() {
   const letter = useRef();
   const image = useRef();
   const tag = useRef();
+  const address = useRef();
   return (
     <div className="write-page">
       <div className="write-page-form">
@@ -57,6 +58,18 @@ function WritePage() {
           </div>
         </div>
 
+        <div className="write-wrapper">
+          <div className="write-title">Address</div>
+          <div className="write-value-wrapper">
+            <textarea
+              type="text"
+              name="address"
+              id="write-address"
+              ref={address}
+            />
+          </div>
+        </div>
+
         <div className="write-page-wrapper">
           <div className="write-title">Image</div>
           <div className="write-value-wrapper">
@@ -82,6 +95,7 @@ function WritePage() {
             form.append("letter", letter.current.value);
             form.append("image", image.current.files[0]);
             form.append("tag", tag.current.value);
+            form.append("address", address.current.value);
 
             fetch("/insert", {
               method: "post",

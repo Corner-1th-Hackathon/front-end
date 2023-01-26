@@ -5,12 +5,13 @@
   font-style: normal;
 }
 
+
 .search-tag {
   font-family: 'IM_Hyemin-Bold';
   display: flex;
   float: right;
-  font-size: 15px;
-  padding: 20px;
+  font-size: 30px;
+  margin: 20px 20px 0px 0px;
 }
 
 .input-tag {
@@ -19,25 +20,24 @@
   outline: none;
   border: 2px solid #000000;
   border-radius: 5px;
-  font-size: 10px;
+  font-size: 20px;
   display: flex;
   align-items: center;  
-  width: 100px;
-  height: 15px;
-  padding: 0px 0px 0px 5px;
+  width: 170px;
+  height: 32px;
   margin-left: 5px;
 }
 
 .search-button {
-  font-family: 'LeeSeoyun';
+  font-family: 'IM_Hyemin-Bold';
   background: none;
   color: #FFFFFF;
-  font-size: 12px;
+  font-size: 25px;
   border: 4px solid #9B8CD7;
   border-radius: 50px;
   background-color: #9B8CD7;
-  height: 20px;
-  margin-left: 5px;
+  height: 38px;
+  margin-left: 7px;
 }
 
 .mainButton {
@@ -84,6 +84,7 @@
 .post-list-style{
   display: flex;
   flex-wrap: wrap;
+  float: left;
 }
 
 .post-items{

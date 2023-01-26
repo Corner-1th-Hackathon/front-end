@@ -4455,7 +4455,11 @@
     "whatwg-mimetype" "^2.3.0"
     "whatwg-url" "^8.0.0"
 
+<<<<<<< HEAD
 "dayjs@^1.11.1", "dayjs@^1.8.15", "dayjs@>= 1.x":
+=======
+"dayjs@^1.11.1", "dayjs@^1.8.15":
+>>>>>>> 369de35072bc04e480686db7432ad57a88a0c3cc
   "integrity" "sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ=="
   "resolved" "https://registry.npmjs.org/dayjs/-/dayjs-1.11.7.tgz"
   "version" "1.11.7"

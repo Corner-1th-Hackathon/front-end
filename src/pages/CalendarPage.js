@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { NavLink, useNavigate, Link } from "react-router-dom";
-import {Menu } from 'antd';
-import Axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../css/CalendarPage.css";
 import moon from "../images/moon.png";
 import leftArrow from "../images/left_arrow.png";
@@ -41,24 +40,8 @@ const CalendarPage = () => {
 
   const [count, setCount] = useState(0);
   const [month, setMonth] = useState(monthList[count]); //1월
-  const [auth, setAuth] = useState('');
-
-  useEffect(()=>{
-    if(localStorage.getItem('token') !== null ){
-      setAuth(true);
-    }
-  }, [])
-
-  const handleLogout = () => {
-    let token = localStorage.getItem('token')
-
-    Axios.post('/api/v1/shop/auth/logout/', token)
-      .then(res => {
-        localStorage.clear()
-        // 사용하려면 App.js에서 /로 라우팅해야 한다
-        window.location.replace('/')
-      });
-  }
+  const [errors, setErrors] = useState(false);
+  const [auth, setAuth] = useState("");
 
   const clickLeft = () => {
     // if (count === 1) {
@@ -85,19 +68,6 @@ const CalendarPage = () => {
 
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   axios({
-  //     method: "get",
-  //     url: `https://beabook-server.herokuapp.com/api/bookstore/getMapMarker`,
-  //   }).then((response) => {
-  //     if (response.data.success) {
-  //       setMarker(response.data.bookstore);
-  //     } else {
-  //       console.log("불러오기 실패");
-  //     }
-  //   });
-  // }, []);
-
   const handleCopyClipBoard = async (str) => {
     try {
       await navigator.clipboard.writeText(str);
@@ -107,10 +77,37 @@ const CalendarPage = () => {
     }
   };
 
+  const isAuthorized = localStorage.getItem("isAuthorized");
+  const username = localStorage.getItem("username");
+
+  // useEffect(() => {
+  //   if (localStorage.getItem("token") !== null) {
+  //     setAuth(true);
+  //   }
+  // }, []);
+
+  const onClick = () => {
+    let token = localStorage.getItem("token");
+
+    axios
+      .post("/api/v1/shop/auth/logout/", token)
+      .then((res) => {
+        localStorage.clear();
+        navigate("/");
+      })
+      .catch((err) => {
+        console.clear();
+        console.log(err.response.data);
+        alert("로그아웃 실패");
+      });
+  };
+
   return (
     <div className="calendar">
       <div className="nav">
-        <div className="user-name">계정 주인</div>
+        <div className="user-name">
+          {auth !== null && username === "" ? " " : username}
+        </div>
         <div className="btn-wrapper">
           <button
             className="link-btn"

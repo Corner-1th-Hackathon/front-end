@@ -1,5 +1,7 @@
-import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useNavigate, Link } from "react-router-dom";
+import {Menu } from 'antd';
+import Axios from 'axios';
 import "../css/CalendarPage.css";
 import moon from "../images/moon.png";
 import leftArrow from "../images/left_arrow.png";
@@ -39,6 +41,24 @@ const CalendarPage = () => {
 
   const [count, setCount] = useState(0);
   const [month, setMonth] = useState(monthList[count]); //1월
+  const [auth, setAuth] = useState('');
+
+  useEffect(()=>{
+    if(localStorage.getItem('token') !== null ){
+      setAuth(true);
+    }
+  }, [])
+
+  const handleLogout = () => {
+    let token = localStorage.getItem('token')
+
+    Axios.post('/api/v1/shop/auth/logout/', token)
+      .then(res => {
+        localStorage.clear()
+        // 사용하려면 App.js에서 /로 라우팅해야 한다
+        window.location.replace('/')
+      });
+  }
 
   const clickLeft = () => {
     // if (count === 1) {
@@ -98,9 +118,19 @@ const CalendarPage = () => {
           >
             Link
           </button>
-          <button className="login-btn" onClick={() => navigate("/login")}>
-            Login
-          </button>
+          <Menu>
+          { auth ?
+            <Menu.Item key="logout" onClick={handleLogout} className="link-btn">
+              로그아웃
+            </Menu.Item>
+            :
+            <Menu.Item key="signin" className="login-btn">
+              <Link to="/login">
+              로그인
+              </Link>
+            </Menu.Item>
+          }
+        </Menu>
         </div>
       </div>
 

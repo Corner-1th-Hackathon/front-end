@@ -1,7 +1,6 @@
 /* 전체 스크롤 지우기 */
 body {
     -ms-overflow-style: none;
-    overflow:hidden;
 }
 ::-webkit-scrollbar {
     display: none;
@@ -62,19 +61,4 @@ body {
     text-align: center;    
     font-size: 80px;
     margin: 160px 40px 0px 40px;
-}
-
-
-@media (max-width: 767px){
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-    
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-
-}
-
-@media (min-width: 1200px) {
 }

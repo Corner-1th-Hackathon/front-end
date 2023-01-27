@@ -1,11 +1,10 @@
-/* 큰거, 중간, 작은거 */
 @media all and (min-width: 1200px) {
   body {
       height: 100vh;
   }
   .jan-moon-image{
-    width: 90px;
-    height:90px;
+    width: 80px;
+    height: 80px;
   }
   .post-items img{
     width: 200px;
@@ -47,14 +46,27 @@
     width: 90px;
     height:90px;
   }
+  .post-items{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'IM_Hyemin-Bold';
+    font-size: 20px;
+    padding: 20px;
   }
-  @media all and (max-width: 1200px) and (min-width: 768px) {
+  .wirteButton {
+    margin: 0px 20px 10px 20px;
+    width: 90px;
+    height: 90px;
+  }
+  
+}
+@media all and (max-width: 1200px) and (min-width: 768px) {
     body {
       height: 100vh;
   }
   .jan-moon-image{
-    width: 80px;
-    height:80px;
+    width: 70px;
+    height:70px;
   }
   .post-items img{
     width: 150px;
@@ -96,8 +108,22 @@
     width: 80px;
     height:80px;
   }
+  .post-items{
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'IM_Hyemin-Bold';
+    font-size: 20px;
+    padding: 20px;
   }
-  @media all and (max-width: 768px) {
+  .wirteButton {
+    margin: 0px 20px 10px 20px;
+    width: 90px;
+    height: 90px;
+  }
+  
+}
+
+@media all and (max-width: 768px) {
     body {
       height: 100vh;
   }
@@ -146,62 +172,61 @@
     width: 60px;
     height:60px;
   }
-  }
-  
-  @font-face {
-    font-family: 'IM_Hyemin-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  .mainButton {
-    display: flex;
-    position: relative;
-    width: 80px;
-    height: 80px;
-    margin-left: 20px;
-    margin-top: 20px;
-    overflow: 'hidden';
-  }
-  
-  .monthName {
-    font-family: 'IM_Hyemin-Bold';
-    display: flex;
-    position: relative;
-    height: 4rem;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .write-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    float: right;
-    margin: 0px 30px 10px 0px;
-  }
-  
-  .wirteButton {
-    margin: 0px 20px 10px 20px;
-    width: 90px;
-    height: 90px;
-  }
-  
-  .post-list-style{
-    display: flex;
-    flex-wrap: wrap;
-    float: left;
-  }
-  
   .post-items{
     margin: 0 auto;
     text-align: center;
     font-family: 'IM_Hyemin-Bold';
     font-size: 20px;
-    padding: 20px;
+    padding: 4px;
   }
-   
+  .wirteButton {
+  margin: 0px 20px 10px 20px;
+  width: 90px;
+  height: 70px;
+}
+
+}
+  
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+.mainButton {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin-left: 20px;
+  margin-top: 20px;
+  overflow: 'hidden';
+}
+  
+.monthName {
+  font-family: 'IM_Hyemin-Bold';
+  display: flex;
+  position: relative;
+  height: 3rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.write-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  float: right;
+  margin: 0px 30px 10px 0px;
+}
+
+.post-list-style{
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+}
+  

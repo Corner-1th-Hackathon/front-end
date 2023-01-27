@@ -1,14 +1,6 @@
 export const mapdata = [
   {
     _id: "1",
-    position: "덕성여자대학교 종로운현",
-    image: "https://i.ibb.co/JcQ45mz/image.gif",
-    lat: 37.57620027324362,
-    lng: 126.98701258397915,
-    date: "2023-01-25",
-  },
-  {
-    _id: "2",
     position: "덕성여자대학교 쌍문근화",
     image: "https://i.ibb.co/BgK2D3B/image.jpg",
     lat: 37.651202732727555,
@@ -16,7 +8,7 @@ export const mapdata = [
     date: "2023-01-01",
   },
   {
-    _id: "3",
+    _id: "2",
     position: "총회의 카페",
     image: "https://i.ibb.co/ryn0372/image.jpg",
     lat: 37.47672017265062,
@@ -24,35 +16,11 @@ export const mapdata = [
     date: "2023-01-27",
   },
   {
-    _id: "4",
+    _id: "3",
     position: "롯데월드",
     image: "https://i.ibb.co/K0ShtwH/image.png",
     lat: 37.511502096763316,
     lng: 127.09832105147683,
     date: "2023-01-11",
-  },
-  {
-    _id: "5",
-    position: "명동 신세계",
-    image: "https://i.ibb.co/D9N55Km/image.png",
-    lat: 37.56040047904232,
-    lng: 126.98087243636482,
-    date: "2023-01-04",
-  },
-  {
-    _id: "6",
-    position: "인천공항",
-    image: "https://i.ibb.co/cJ37rQ7/image.jpg",
-    lat: 37.447288752367655,
-    lng: 126.44887395193034,
-    date: "2023-01-15",
-  },
-  {
-    _id: "7",
-    position: "우리집",
-    image: "https://i.ibb.co/QHdjR5w/image.jpg",
-    lat: 37.5534952531394,
-    lng: 126.9225405210943,
-    date: "2023-01-15",
   },
 ];

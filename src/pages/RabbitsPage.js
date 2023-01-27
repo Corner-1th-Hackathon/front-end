@@ -83,7 +83,9 @@ const RabbitsPage = () => {
         <div className="btn-wrapper">
           <button
             className="link-btn"
-            onClick={() => handleCopyClipBoard("http://localhost:3000/")}
+            onClick={() =>
+              handleCopyClipBoard("https://moon-bunny.netlify.app/")
+            }
           >
             Link
           </button>

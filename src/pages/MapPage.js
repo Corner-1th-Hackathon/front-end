@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router";
 import "../css/MapPage.css";
 import { mapdata } from "../data/mapData";
 import mapMarker from "../images/map_marker.png";
 const { kakao } = window;
 
 const MapPage = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     const container = document.getElementById("map");
     const options = {
@@ -62,8 +65,16 @@ const MapPage = () => {
         closeOverlay();
       });
 
+      kakao.maps.event.addListener(marker, "click", function () {
+        onClick();
+      });
+
       function closeOverlay() {
         mapCustomOverlay.setMap(null);
+      }
+
+      function onClick() {
+        navigate("/detail/24");
       }
     });
   });

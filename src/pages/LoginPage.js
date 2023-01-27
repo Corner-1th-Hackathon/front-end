@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
-import Naver from "../images/naver.png";
 import MoonImage from "../images/moon.png";
 import "../css/Login.css";
 import "../css/Tooltip.css";

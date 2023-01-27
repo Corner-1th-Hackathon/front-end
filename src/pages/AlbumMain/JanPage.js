@@ -9,7 +9,7 @@ function JanPage() {
   const navigate = useNavigate();
   const [items, setPostList] = useState([]);
   const name = useRef();
-  const tag=useRef();
+  const tag = useRef();
 
   function getList(url) {
     fetch(url)
@@ -33,28 +33,23 @@ function JanPage() {
       </div>
 
       <div className="search-tag">
-        Tag :    
-        <input tag='tag' ref={tag} className="input-tag"/>
-        <button type='button' className="search-button" onClick={()=>{
-            getList(`/list?tag=${tag.current.value}`)
-        }}>검색</button>
-      <br /><br />
-
-      </div>   
-      {/* <h2>Post 목록</h2>
-
-      등록된 Post 수: {items.length} */}
+        Tag :
+        <input tag="tag" ref={tag} className="input-tag" />
+        <button
+          type="button"
+          className="search-button"
+          onClick={() => {
+            getList(`/list?tag=${tag.current.value}`);
+          }}
+        >
+          검색
+        </button>
+        <br />
+        <br />
+      </div>
       <br />
       <br />
-      <div
-        className="post-list-style"
-        // style={{
-
-        //   display: "grid",
-        //   gridTemplateRows: "1fr",
-        //   gridTemplateColumns: "1fr 1fr 1fr 1fr 1fr",
-        // }}
-      >
+      <div className="post-list-style">
         {items.map(({ post_code, name, date, image }) => (
           <div className="post-items">
             <PostItem
@@ -83,7 +78,6 @@ const MainButton = () => {
     </div>
   );
 };
-
 
 // 글쓰기 버튼, 이동
 const WriteButton = () => {

@@ -84,7 +84,7 @@ const MapPage = () => {
       }
 
       function onClick() {
-        navigate("/detail/24");
+        navigate("/detail/1");
       }
     });
   });

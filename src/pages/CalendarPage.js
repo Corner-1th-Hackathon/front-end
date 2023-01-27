@@ -39,31 +39,23 @@ const CalendarPage = () => {
   ];
 
   const [count, setCount] = useState(0);
-  const [month, setMonth] = useState(monthList[count]); //1월
+  const [month, setMonth] = useState(monthList[count]);
   const [errors, setErrors] = useState(false);
   const [auth, setAuth] = useState("");
 
   const clickLeft = () => {
-    // if (count === 1) {
-
-    // } else {
-    //   setCount(Math.abs(count - 1) % 12);
-    //   console.log("count", count);
-    //   setMonth(monthList[count - 2]);
-    // }
     if (month === "1월") {
-      setMonth(monthList[12 - Math.abs(count - (1 % 11))]); //3
+      setMonth(monthList[12 - Math.abs(count - (1 % 11))]);
       setCount(11);
     } else {
       setCount(Math.abs(count - (1 % 11)));
-      setMonth(monthList[(count - 1) % 12]); //3
+      setMonth(monthList[(count - 1) % 12]);
     }
   };
 
   const clickRight = () => {
     setCount((count + 1) % 12);
-    // console.log("count", count);
-    setMonth(monthList[(count + 1) % 12]); //0 1 2 3 .. 11
+    setMonth(monthList[(count + 1) % 12]);
   };
 
   const navigate = useNavigate();
@@ -79,12 +71,6 @@ const CalendarPage = () => {
 
   const isAuthorized = localStorage.getItem("isAuthorized");
   const username = localStorage.getItem("username");
-
-  // useEffect(() => {
-  //   if (localStorage.getItem("token") !== null) {
-  //     setAuth(true);
-  //   }
-  // }, []);
 
   const onClick = () => {
     let token = localStorage.getItem("token");
@@ -109,7 +95,9 @@ const CalendarPage = () => {
         <div className="btn-wrapper">
           <button
             className="link-btn"
-            onClick={() => handleCopyClipBoard("http://localhost:3000/")}
+            onClick={() =>
+              handleCopyClipBoard("https://moon-bunny.netlify.app/")
+            }
           >
             Link
           </button>
@@ -204,7 +192,6 @@ const CalendarPage = () => {
         )}
       </div>
 
-      {/* <div className="calendar-bottom-wrapper"> */}
       <div className="arrow-wrapper">
         <img
           className="left-arrow"

@@ -1,9 +1,9 @@
 .monthButton {
     display: flex;
-    top: 30px;
-    bottom: 30px;
     width: 110px;
     height: 110px;
+    margin-top: -10px;
+    margin-left: 10px;
     overflow: 'hidden';
 }
 
@@ -13,12 +13,11 @@
     position: relative;
     height: 4rem;
     font-size: 3rem;
-    padding: 20px;
+    padding: 0px 20px 20px 20px;
     align-items: center;
     justify-content: center;
 }  
 
-/*IM혜민체*/
 @font-face {
     font-family: 'IM_Hyemin-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
@@ -41,7 +40,7 @@
 .detailPhoto {
     display: inline-block;
     vertical-align: top;
-	width: 290px;
+    width: 290px;
     height: 290px;
     margin-left: 67px;
     object-fit: contain;
@@ -55,23 +54,32 @@
     margin-left: 20px;   
 }
 
+.detail-additional-un {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    margin-left: 20px;   
+    visibility: hidden;
+}
+
 .empty-icon {
     display: flex;
-	width: 45px;
+    width: 45px;
     height: 45px;
     margin-bottom: 10px;
 }
 
 .full-icon{
     display: flex;
-	width: 45px;
+    width: 45px;
     height: 45px;
     margin-bottom: 10px;
 }
 
 .bomb-icon {
     display: flex;
-	width: 45px;
+    width: 45px;
     height: 45px;
     margin-bottom: 10px;
 }
@@ -119,7 +127,6 @@ hr {
     padding-right: 35%;
 }
 
-/*이서윤체*/
 @font-face {
     font-family: 'LeeSeoyun';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');

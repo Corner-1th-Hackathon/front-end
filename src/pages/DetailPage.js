@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "../css/DetailPage.css";
 import JanImage from "../images/1월.png";
-import SampleImage from "../images/SampleImage.png";
 import Bomb from "../images/bomb.png";
 import EmptyHeart from "../images/empty-heart.png";
 import FullHeart from "../images/full-heart.png";
@@ -106,11 +105,15 @@ const DetailPhoto = ({ image }) => {
     alert(privateList[(cnt + 1) % 2] + "로 변경합니다.");
   };
 
+  const username = localStorage.getItem("username");
+
   return (
     <div>
       <div className="detail-image-wrapper">
         <img src={image} alt="업로드한 사진" className="detailPhoto" />
-        <div className="detail-additional">
+        <div
+          className={username ? "detail-additional" : "detail-additional-un"}
+        >
           <img
             src={Bomb}
             alt="삭제하기"

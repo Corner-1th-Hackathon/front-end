@@ -105,14 +105,16 @@ const DetailPhoto = ({ image }) => {
     alert(privateList[(cnt + 1) % 2] + "로 변경합니다.");
   };
 
-  const username = localStorage.getItem("username");
+  const isAuthorized = localStorage.getItem("isAuthorized");
 
   return (
     <div>
       <div className="detail-image-wrapper">
         <img src={image} alt="업로드한 사진" className="detailPhoto" />
         <div
-          className={username ? "detail-additional" : "detail-additional-un"}
+          className={
+            isAuthorized ? "detail-additional" : "detail-additional-un"
+          }
         >
           <img
             src={Bomb}

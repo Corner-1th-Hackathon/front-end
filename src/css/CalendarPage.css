@@ -1,3 +1,220 @@
+/* 큰거, 중간, 작은거 */
+@media all and (min-width: 1200px) {
+    .moon-img{
+        width: 500px;
+        height: 500px;
+    }
+    .rabbit-img-wrapper{
+        left: 50%;
+        top: 5%;
+        margin-left: calc(350px /-2);
+    }
+    
+    .rabbit-img{
+        width: 360px;
+        height: 360px;
+    }
+    .left-arrow, .right-arrow{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .left-arrow {
+        margin-right: 150px;
+    }
+    
+    .right-arrow{
+        margin-left: 150px;
+    }
+    .rabbit-btn{
+        margin: 0px 30px 10px 0px;
+    }
+    
+    .black-rabbit{
+        width: 50px;
+        height:50px;
+    }
+    
+    .all-rabbit-content{
+        font-size: 17px;
+    }
+    .option-btn{
+        margin: -65px 0px 0px 30px;
+    }
+    
+    .calendar-btn{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .map-btn{
+        width: 60px;
+        height: 60px;
+        padding-top: 10px;
+    
+    }
+    .link-btn {
+        font-size: 20px;
+        padding: 12px 15px 12px 15px;
+    }
+    
+    .login-btn{
+        font-size: 20px;
+        padding: 12px 10px 12px 10px;
+    }
+    .user-name {
+        font-size: 30px;
+    }
+}
+@media all and (max-width: 1200px) and (min-width: 768px) {
+    .moon-img{
+        padding-top: 50px;
+        width: 400px;
+        height: 400px;
+    }
+    body {
+        height: 100vh;
+    }
+    .rabbit-img-wrapper{
+        left: 50%;
+        top: 15%;
+        margin-left: calc(300px /-2);
+    }
+    
+    .rabbit-img{
+        width: 300px;
+        height: 300px;
+    }
+    .left-arrow, .right-arrow{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .left-arrow {
+        margin-right: 150px;
+    }
+    
+    .right-arrow{
+        margin-left: 150px;
+    }
+    .rabbit-btn{
+        margin: 40px 30px 10px 0px;
+    }
+    
+    .black-rabbit{
+        width: 50px;
+        height:50px;
+    }
+    
+    .all-rabbit-content{
+        font-size: 17px;
+    }
+    .option-btn{
+        margin: -25px 0px 0px 30px;
+    }
+    
+    .calendar-btn{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .map-btn{
+        width: 60px;
+        height: 60px;
+        padding-top: 10px;
+    
+    }
+    .link-btn {
+        font-size: 19px;
+        padding: 11px 14px 11px 14px;
+    }
+    
+    .login-btn{
+        font-size: 19px;
+        padding: 11px 9px 11px 9px;
+    }
+    .user-name {
+        font-size: 28px;
+    }
+}
+@media all and (max-width: 768px) {
+    .moon-img{
+        padding-top: 100px;
+        width: 300px;
+        height: 300px;
+    }
+    body {
+        height: 100vh;
+    }
+    .rabbit-img-wrapper{
+        left: 49%;
+        top: 23%;
+        margin-left: calc(250px /-2);
+    }
+    
+    .rabbit-img{
+        width: 260px;
+        height: 260px;
+    }
+    .left-arrow, .right-arrow{
+        width: 30px;
+        height: 30px;
+    }
+    
+    .left-arrow {
+        margin-right: 100px;
+    }
+    
+    .right-arrow{
+        margin-left: 100px;
+    }
+    .rabbit-btn{
+        margin: 110px 30px 10px 0px;
+    }
+    
+    .black-rabbit{
+        width: 40px;
+        height: 40px;
+    }
+    
+    .all-rabbit-content{
+        font-size: 16px;
+    }
+    .option-btn{
+        margin: 50px 0px 0px 30px;
+    }
+    
+    .calendar-btn{
+        width: 50px;
+        height: 50px;
+    }
+    
+    .map-btn{
+        width: 50px;
+        height: 50px;
+        padding-top: 10px;
+    
+    }
+    .link-btn {
+        font-size: 18px;
+    }
+    
+    .login-btn{
+        font-size: 18px;
+    }
+    .link-btn {
+        font-size: 17px;
+        padding: 10px 13px 10px 13px;
+    }
+    
+    .login-btn{
+        font-size: 17px;
+        padding: 10px 8px 10px 8px;
+    }
+    .user-name {
+        font-size: 26px;
+    }
+}
 @font-face {
     font-family: 'IM_Hyemin-Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
@@ -16,7 +233,6 @@
 
 .user-name {
     font-family: 'IM_Hyemin-Bold';
-    font-size: 30px;
     margin: 20px;
 }
 
@@ -28,9 +244,7 @@
     font-family: 'IM_Hyemin-Bold';
     background: none;
     color: #FFFFFF;
-    font-size: 20px;
     border: 4px solid #8C9AD7;
-    padding: 12px 15px 12px 15px;
     border-radius: 100px;
     background-color: #8C9AD7;
 }
@@ -39,44 +253,19 @@
     font-family: 'IM_Hyemin-Bold';
     background: none;
     color: #FFFFFF;
-    font-size: 20px;
     border: 4px solid #A0C6FF;
-    padding: 12px 10px 12px 10px;
     border-radius: 100px;
     background-color: #A0C6FF;
     margin: 0px 20px 0px 30px;
 }
 
-.left-arrow, .right-arrow{
-    width: 50px;
-    height: 50px;
-}
-
-.left-arrow {
-    margin-right: 150px;
-}
-
-.right-arrow{
-    margin-left: 150px;
-}
-
 .moon-img{
     display: flex;
     margin: auto;
-    width: 500px;
-    height: 500px;
 }
 
 .rabbit-img-wrapper{
     position: absolute;
-    left: 50%;
-    top: 5%;
-    margin-left: calc(350px /-2);
-}
-
-.rabbit-img{
-    width: 360px;
-    height: 360px;
 }
 
 .month-number{
@@ -97,16 +286,9 @@
     justify-content: center;
     flex-direction: column;
     float: right;
-    margin: 0px 30px 10px 0px;
-}
-
-.black-rabbit{
-    width: 50px;
-    height:50px;
 }
 
 .all-rabbit-content{
-    font-size: 17px;
     font-family: 'IM_Hyemin-Bold';
 }
 
@@ -114,17 +296,4 @@
     display: flex;
     flex-direction: column;
     float: left;
-    margin: -65px 0px 0px 30px;
-}
-
-.calendar-btn{
-    width: 60px;
-    height: 60px;
-}
-
-.map-btn{
-    width: 60px;
-    height: 60px;
-    padding-top: 10px;
-
 }

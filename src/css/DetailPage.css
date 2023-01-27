@@ -1,3 +1,19 @@
+@media all and (min-width: 1200px) {
+    body {
+        height: 100vh;
+    }
+    }
+    @media all and (max-width: 1200px) and (min-width: 768px) {
+      body {
+        height: 100vh;
+    }
+    }
+    @media all and (max-width: 768px) {
+      body {
+        height: 100vh;
+    }
+}
+
 .monthButton {
     display: flex;
     width: 110px;

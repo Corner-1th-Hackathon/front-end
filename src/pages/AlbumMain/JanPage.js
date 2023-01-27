@@ -72,7 +72,7 @@ const MainButton = () => {
     <div className="wrap">
       <span data-tooltip="메인으로">
         <NavLink to={"/"} className="mainButton">
-          <img src={MoonImage} alt="메인으로" />
+          <img className="jan-moon-image" src={MoonImage} alt="메인으로" />
         </NavLink>
       </span>
     </div>
